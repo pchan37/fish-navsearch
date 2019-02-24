@@ -1,7 +1,3 @@
-#+TITLE: navsearch
-
-#+LATEX_HEADER: \usepackage{parskip} \usepackage[margin=1in]{geometry}
-
 * navsearch
 
 A fish plugin that utilize the [[https://github.com/lotabout/skim][sk/skim]] interface to improve the following functions:
