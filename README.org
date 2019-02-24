@@ -24,7 +24,7 @@ cd fish-navsearch
 ** Dependencies
 navsearch utilizes a few binaries: [[https://github.com/sharkdp/fd][fd]], [[https://github.com/lotabout/skim][sk/skim]], and [[https://github.com/PRust-Projects/rust-enhancd][rust-enhancd]].  Pre-built version of these
 binaries are also bundled and found on the [[https://github.com/pchan37/fish-navsearch/releases][releases page]].  Opening files also requires Emacs to be
-installed right now.
+installed right now.  Please make sure that the binaries are on the path as well.
 
 ** Navigating Directories
 Utilize [[https://github.com/PRust-Projects/rust-enhancd][rust-enhancd]] to keep track of frequently accessed directories and utilize [[https://github.com/lotabout/skim][sk/skim]]
