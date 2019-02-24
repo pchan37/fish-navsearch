@@ -3,12 +3,14 @@
 function ns-skim-change-directory
     if ! type -q $NS_RUST_ENHANCD
         echo "rust-enhancd is not installed.  Please read the README on where you can find it."
-        exit 1
+        commandline -f repaint
+        return 1
     end
 
     if ! type -q $NS_SKIM
         echo "skim/sk is not installed.  Please read the README on where you can find it."
-        exit 1
+        commandline -f repaint
+        return 1
     end
 
     set -l get_dir_cmd "$NS_RUST_ENHANCD getkeys"
