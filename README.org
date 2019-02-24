@@ -1,0 +1,55 @@
+#+TITLE: navsearch
+
+#+LATEX_HEADER: \usepackage{parskip} \usepackage[margin=1in]{geometry}
+
+* navsearch
+
+A fish plugin that utilize the [[https://github.com/lotabout/skim][sk/skim]] interface to improve the following functions:
+- navigating directories
+- opening files
+- inserting file paths
+  
+** Installation
+   
+*** Fisher
+navsearch can be installed via fisher:
+#+BEGIN_SRC
+fisher add pchan37/fish-navsearch
+#+END_SRC
+
+*** Manual Installation
+navsearch can also be installed manually:
+#+BEGIN_SRC
+git clone https://github.com/pchan37/fish-navsearch
+cd fish-navsearch
+./manual_install.fish
+#+END_SRC
+  
+** Dependencies
+navsearch utilizes a few binaries: [[https://github.com/sharkdp/fd][fd]], [[https://github.com/lotabout/skim][sk/skim]], and [[https://github.com/PRust-Projects/rust-enhancd][rust-enhancd]].  Pre-built version of these
+binaries are also bundled and found on the [[https://github.com/pchan37/fish-navsearch/releases][releases page]].  Opening files also requires Emacs to be
+installed right now.
+
+** Navigating Directories
+Utilize [[https://github.com/PRust-Projects/rust-enhancd][rust-enhancd]] to keep track of frequently accessed directories and utilize [[https://github.com/lotabout/skim][sk/skim]]
+to display the directories for selection.  Please ensure that all dependencies are installed.
+
+Default keybinding: =Alt-C=
+
+** Opening Files
+Utilizes [[https://github.com/sharkdp/fd][fd]] to find files in a directory and utilize [[https://github.com/lotabout/skim][sk/skim]] to display the directories for
+selection.  Currently opens the file via terminal emacs.  Please ensure that all dependencies are
+installed.
+
+Default keybinding for opening files in current directory: =Alt-o=
+
+Default keybinding for opening files in root directory: =Ctrl-o=
+
+** Inserting File Paths
+Utilizes [[https://github.com/sharkdp/fd][fd]] to find directories and files in a directory and utilize [[https://github.com/lotabout/skim][sk/skim]] to display
+them for selection.  The selected file paths would be inserted directly into the commandline.
+Please ensure that all dependencies are installed.
+
+Default keybinding for inserting file paths in home directory: =Alt-s=
+
+Default keybinding for inserting file paths in root directory: =Ctrl-s=
