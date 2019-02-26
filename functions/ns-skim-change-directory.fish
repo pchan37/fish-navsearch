@@ -14,7 +14,7 @@ function ns-skim-change-directory
     end
 
     set -l get_dir_cmd "$NS_RUST_ENHANCD getkeys"
-    set -l selected_dir (eval "$get_dir_cmd" | env SKIM_DEFAULT_OPTIONS="--prompt 'Switch to: ' $NS_SKIM_NAVIGATION_OPTS" sk)
+    set -l selected_dir (eval "$get_dir_cmd" | env SKIM_DEFAULT_OPTIONS="--prompt 'Switch to: ' $NS_SKIM_NAVIGATION_OPTS" $NS_SKIM)
     if test -n "$selected_dir"
         $NS_RUST_ENHANCD update "$selected_dir"
         cd "$selected_dir"
