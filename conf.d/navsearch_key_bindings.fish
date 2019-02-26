@@ -32,3 +32,12 @@ else
     bind \ec ns-skim-change-directory
     bind \eC ns-skim-change-directory
 end
+
+# Default key binding for searching history
+if bind -M insert >/dev/null 2>/dev/null
+    bind -M insert \er ns-skim-search-history
+    bind -M insert \eR ns-skim-search-history
+else
+    bind \er ns-skim-search-history
+    bind \eR ns-skim-search-history
+end
