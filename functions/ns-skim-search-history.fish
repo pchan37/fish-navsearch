@@ -7,7 +7,7 @@ function ns-skim-search-history
         return 1
     end
 
-    set -l selected_history (eval "history -z" | env SKIM_DEFAULT_OPTIONS="--prompt 'Search history: ' --tac --read0 $NS_SKIM_NAVIGATION_OPTS" $NS_SKIM)
+    set -l selected_history (eval "history -z" | env SKIM_DEFAULT_OPTIONS="--prompt 'Search history: ' --read0 $NS_SKIM_NAVIGATION_OPTS" $NS_SKIM)
     if test -n "$selected_history"
         commandline -i "$selected_history"
     end
