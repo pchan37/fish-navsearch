@@ -17,6 +17,8 @@ if bind -M insert >/dev/null 2>/dev/null
     bind -M insert \cO ns-skim-open-files-from-root
     bind -M insert \eo ns-skim-open-files-from-pwd
     bind -M insert \eO ns-skim-open-files-from-pwd
+    bind -m insert ':e ' ns-skim-open-files-from-pwd
+    bind -m insert ':E ' ns-skim-open-files-from-root
 else
     bind \co ns-skim-open-files-from-root
     bind \cO ns-skim-open-files-from-root
@@ -28,6 +30,7 @@ end
 if bind -M insert >/dev/null 2>/dev/null
     bind -M insert \ec ns-skim-change-directory
     bind -M insert \eC ns-skim-change-directory
+    bind -m insert ':b ' ns-skim-change-directory
 else
     bind \ec ns-skim-change-directory
     bind \eC ns-skim-change-directory
@@ -37,6 +40,7 @@ end
 if bind -M insert >/dev/null 2>/dev/null
     bind -M insert \er ns-skim-search-history
     bind -M insert \eR ns-skim-search-history
+    bind -m insert '/' ns-skim-search-history
 else
     bind \er ns-skim-search-history
     bind \eR ns-skim-search-history
